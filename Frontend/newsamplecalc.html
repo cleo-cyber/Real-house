@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+</head>
+<body>
+    <!-- King county price prediction -->
+    <div class="container">
+        <h1>King County House Price Prediction</h1>
+        <form>
+            <label for="bedrooms">Bedrooms</label>
+            <input type="number" name="bedrooms" id="bedrooms" required>
+
+            <label for="bathrooms">Bathrooms</label>
+            <input type="number" name="bathrooms" id="bathrooms" required>
+
+            <label for="sqft_living">Living Space (sqft)</label>
+            <input type="number" name="sqft_living" id="sqft_living" required>
+
+            <label for="sqft_lot">Lot Size (sqft)</label>
+            <input type="number" name="sqft_lot" id="sqft_lot" required>
+
+            <label for="floors">Floors</label>
+            <input type="number" name="floors" id="floors" required>
+
+            <label for="waterfront">Waterfront</label>
+            <input type="number" name="waterfront" id="waterfront" required>
+
+            <label for="view">View</label>
+            <input type="number" name="view" id="view" required>
+
+            <label for="condition">Condition</label>
+            <input type="number" name="condition" id="condition" required>
+
+            <label for="grade">Grade</label>
+            <input type="number" name="grade" id="grade" required>
+            
+            <label for="sqft_above">Above Space (sqft)</label>
+            <input type="number" name="sqft_above" id="sqft_above" required>
+            
+            <label for="sqft_basement">Basement Space (sqft)</label>
+            <input type="number" name="sqft_basement" id="sqft_basement" required>
+
+            <label for="yr_built">Year Built</label>
+            <input type="number" name="yr_built" id="yr_built" required>
+
+            <label for="yr_renovated">Year Renovated</label>
+            <input type="number" name="yr_renovated" id="yr_renovated" required>
+
+            <label for="month">month</label>
+            <input type="number" name="month" id="month" required>
+
+            <label for="sqft_lot15">sqft_lot15</label>
+            <input type="number" name="sqft_lot15" id="sqft_lot15" required>
+
+            <label for="sqft_living15">sqft_living15</label>
+            <input type="number" name="sqft_living15" id="sqft_living15" required>
+            <label for="Year">Year </label>
+            <input type="number" name="Year" id="Year" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+<script src="./assets/js/samplepricecalc.js"></script>    
+</body>
+</html>

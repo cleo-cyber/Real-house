@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/realtor.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> -->
+    <link rel="stylesheet" href="./assets/css/userprofile.css">
+    <link rel="stylesheet" href="./assets/css/updateprofile.css">
+
+    <script src="./assets/js/Functions/checktoken.js"></script>
+
+    <title>RealtorProfile</title>
+</head>
+
+<body>
+    <!-- Side menu -->
+    <div class="dashboard_container">
+        <aside>
+            <div class="logo_name_socials">
+                <div class="dash__image">
+                    <!-- <img src="./assets/images/cleo.jpg" alt="user"> -->
+                </div>
+                <div class="name">
+                    
+                </div>
+                <div class="socials">
+                    <ul>
+                        <li><i class='bx bxl-meta'></i></li>
+                        <li><i class='bx bxl-meta'></i></li>
+                        <li><i class='bx bxl-meta'></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu">
+                <ul class="menu_links">
+                    <li><a href="#"><i class='bx bxs-dashboard' ></i>Dashboard</a></li>
+                    <li class="link_dropdown"><i class='bx bx-building-house'></i>Properties
+                    <ul class="menu_links_inner">
+                        <a href="Addlisting.html"><li>Add Property</li></a>
+                        <a href="viewListing.html"><li>View Properties</li></a>
+                        
+
+                    </ul>
+                    
+                    </li>
+                    <li class="link_dropdown users"><i class='bx bxs-user'></i>Users
+                        <ul class="menu_links_inner">
+                            <li><a href="viewuser.html">All</a></li>
+                            <li><a href="viewrealtor.html">Realtors</a></li>
+                            <li><a href="viewtenants.html">Tenants</a></li>
+                            
+    
+                        </ul>
+                        
+                        </li>
+                    <li><a href="reports.html" id="downloadCSV"><i class='bx bxs-report' ></i> Reports</a></li>
+                    <li><a href="index.html" id=""><i class='bx bxs-home' ></i> Home</a></li>
+
+                    <li class="logoutbtn"><a href="#"><i class='bx bx-log-out ' ></i> Logout</a></li>
+                </ul>
+
+            </div>
+
+        </aside>
+        <main >
+            <div class="dash_header">
+                <div class="logo">
+                    <img src="./assets//images/RealLogo.jpg" alt="logo">
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                    <button><i class='bx bx-search'></i></button>
+            </div>    
+                    <!--Message  -->
+                    <div class="dash_envelope">
+                        <a href="#"><i class='bx bx-bell'></i></a>
+                        <a href="#"><i class='bx bx-envelope'></i></a>
+                        <a href="#" class="settings"><i class='bx bx-cog'></i></a>
+
+                    </div>
+            </div>
+
+            <div class="house_info_cards">
+
+                <div class="info_card">
+
+                    <div>
+
+                    
+                    <div class="info_card_text">
+                        <h3>Properties</h3>
+                        <h2>60</h2>
+                    </div>
+                    <div class="sold_or_new">
+                        <p>New <span>20</span></p>
+                        <p>Sold <span>20</span></p>
+                        <p>Rent <span>20</span></p>
+                        
+                    </div>
+                    </div>
+                    <div class="info_card_icon">
+                        <i class='bx bx-building-house'></i>
+                    </div>
+                    
+                </div>
+                <div class="info_card">
+
+                    <div>
+
+                    
+                    <div class="info_card_text">
+                        <h3>Properties</h3>
+                        <h2>60</h2>
+                    </div>
+                    <div class="sold_or_new">
+                        <p>New <span>20</span></p>
+                        <p>Sold <span>20</span></p>
+                        <p>Rent <span>20</span></p>
+                        
+                    </div>
+                    </div>
+                    <div class="info_card_icon">
+                        <i class='bx bx-building-house'></i>
+                    </div>
+                    
+                </div>
+                
+                <div class="info_card">
+
+                    <div>
+
+                    
+                    <div class="info_card_text">
+                        <h3>Properties</h3>
+                        <h2>60</h2>
+                    </div>
+                    <div class="sold_or_new">
+                        <p>New <span>20</span></p>
+                        <p>Sold <span>20</span></p>
+                        <p>Rent <span>20</span></p>
+                        
+                    </div>
+                    </div>
+                    <div class="info_card_icon">
+                        <i class='bx bx-building-house'></i>
+                    </div>
+                    
+                </div>
+                
+                
+
+            </div>
+            <div class="chart-container">
+                <div class="chart">
+                  <h2 style="text-align: center;">Number of Houses Occupied</h2>
+                  <canvas id="pieChart" width="30" height="15"></canvas>
+                </div>
+                <div class="chart">
+                  <h2 style="text-align: center;">Room Distribution</h2>
+                  <canvas id="barChart" width="30" height="15"></canvas>
+                </div>
+              </div>
+
+          
+<!-- Visitor statistics -->
+<div class="visitor_stats">
+    <div class="visitor_stats_header">
+        <h2>Visitor Statistics</h2>
+        <select name="" id="">
+            <option value="">Today</option>
+            <option value="">This Week</option>
+            <option value="">This Month</option>
+        </select>
+    </div>
+    <div class="visitor_stats_container">
+        <div class="visitor_stats_card">
+            <div class="visitor_stats_card_icon">
+                <i class='bx bx-user'></i>
+
+</div>
+
+<div class="visitor_stats_card_text">
+    <h3>Visitors</h3>
+    <h2>60</h2>
+
+    
+</div>
+</div>
+<div class="userprof" >
+    <div class="account_container">
+        <div class="account_sider">
+            <div class="account_links">
+                <a href="#" class="account_link"><i class='bx bxs-user'></i></i> <span>Account</span></a>
+                <a href="#userprofile" class="security_link"><i class='bx bx-shield-quarter'></i> <span>Security</span></a>
+            </div>
+        </div>
+         <div class="account_main">
+            <!-- <div class="account_header">
+                <h1> Account</h1>
+                <p>Manage your account Infomation</p>
+            </div>
+            <div class="account_profile">
+                <h2 class="profile">Profile</h2>
+                <div class="profile_information">
+                    
+                    <div class="profile_image">
+                        <div class="image_profice">
+                            <img src="./assets/images/cleo.jpg" alt="Profile Image">
+                            <p>John Doe</p>
+
+                        </div>
+                        <div class="next_icon">
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="name_details">
+                <h2>Email</h2>
+                <p>doe@gmail.com</p>
+
+            </div>
+            <div class="name_details">
+                <h2>Password</h2>
+                <p>1234567890</p>
+        </div>
+        <div class="security_sect" id="userprofile">
+            <div class="security_heder">
+                <h1>Security</h1>
+                <p class="manage_acc">Manage your account security preferences</p>
+            </div>
+            <div class="delete_account">
+                <p>Permanently delete your account</p>
+                <button>Delete Account</button>
+        </div>
+
+    </div> -->
+    </div>
+    </div>
+    
+</div>
+        </main>
+    </div>
+    <script src="./assets/js/User/loggedUser.js"></script>
+    <script src="./assets/js/userprofile.js"></script>
+    <script src="./assets/js/User/getUser.js"></script>
+    <script src="./assets/js/dashchart.js"></script>
+    <script src="./assets/js/Listings/Profilenav.js"></script>
+    <script src="./assets/js/Logout.js"></script>
+    <script src="./assets/js/Functions/Checkrole.js"></script>
+</body>
+
+</html>

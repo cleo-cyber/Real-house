@@ -1,0 +1,109 @@
+.logo_price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.logo_price img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.calculate__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.89);
+  box-shadow: 2px 2px 5px #33333376;
+  border-radius: 5px;
+  gap: 2rem;
+  padding: 0 2rem;
+  
+}
+.price{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0;
+    
+}
+
+.price h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  font-weight: 400;
+}
+#price-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* margin-top: 2rem; */
+  width: 70%;
+}
+#price-form .firstformcont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+#price-form input,
+select {
+  padding: 1rem;
+  border: 1px solid #33333376;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+}
+#price-form input:focus,
+select:focus {
+  border: 1px solid var(--color-bg);
+}
+#price-form input::placeholder {
+  font-size: 1rem;
+  color: #33333376;
+}
+.selections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.calcBtns button{
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    background-color: rgba(5, 91, 5, 0.769);
+    color: var(--color-white);
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .calculate__container {
+    width: 100%;
+  }
+  .price {
+    padding: 2rem 0;
+  }
+  #price-form {
+    width: 100%;
+  }
+  .calcBtns {
+    display: flex;
+    gap: 1rem;
+  }
+  .calcBtns button {
+    width: 100%;
+  }
+  
+}

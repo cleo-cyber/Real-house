@@ -1,0 +1,351 @@
+.userprof{
+    display: none;
+}
+
+.userprof.show{
+    display: block;
+    /* animation: slideIn .3s ease-in-out; */
+    transition: all .3s ease-in-out;
+
+}
+.account_container {
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(50px, .3fr)); */
+  justify-content: center;
+  background-color: rgb(219, 222, 224);
+    padding: 2rem;
+    box-shadow: 2px 2px 2px  #e5e4e4;
+  /* margin:5rem auto; */
+position: absolute;
+/* Center transalate from left and right*/
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center transalate from top and bottom*/
+    top: 10%;
+    /* transform: translateY(-50%); */
+    width: 50%;
+    z-index: 2;
+    border-radius: 5px;
+    height: 80vh;
+
+
+}
+.account_sider {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 0;
+  width: 20px;
+  /* flex-basis: 20vw; */
+  position: relative;
+    /* left: 5%; */
+}
+
+.account_container img {
+  width: 100%;
+  border-radius: 50%;
+}
+.account_links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 0;
+  width: auto;
+  position: fixed;
+}
+
+.account_links a {
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+.account_links a i {
+  margin-right: .8rem;
+}
+
+/* hover */
+.account_links a:hover {
+  background-color: #e8e3e3;
+  color: #333;
+}
+.account_main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 5rem;
+  width: 20%;
+  flex-basis: 70vw;
+    margin-left: 15%;
+    position: relative;
+    /* scroll */
+    overflow-y: scroll;
+
+}
+
+.account_main h1 {
+  /* font-size: 1.5rem; */
+  /* text-align: center; */
+  color: #333;
+  font-weight: 400;
+}
+.account_main .profile{
+    font-size: 1.2rem;
+    /* text-align: center; */
+    color: #333;
+    font-weight: bold;
+    padding: 1rem 0;
+
+}
+
+.account_main h2 {
+  font-size: 1.1rem;
+  /* text-align: center; */
+  color: #333;
+  font-weight: 400;
+}
+
+.account_main p {
+  font-size: 1rem;
+  /* text-align: center; */
+  color: #333333e1;
+  font-weight: 400;
+}
+
+/* profile_information */
+.profile_image,.name_details{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    border : 1px solid #d6d3d3df;
+    border-radius: 5px;
+    
+    /* justify-content: center; */
+}
+.profile_image:hover,.name_details:hover,.delete_account:hover{
+    background-color: #f5f5f5b0;
+    box-shadow: 1px 1px 1px  #e5e4e4;
+}
+.profile_image i{
+    font-size: 1.5rem;
+    color: #333;
+
+}
+.image_profice{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.profile_image img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.delete_account{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 2rem;
+    border : 1px solid #d6d3d3df;
+    border-radius: 5px;
+    justify-content: space-between;
+
+
+    
+}
+
+.delete_account button{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #c11ceb;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.delete_account button:hover{
+    background-color: #9d26ba;
+    color: #fff;
+}
+
+.security_heder .manage_acc{
+    padding: 1rem;
+}
+
+/* Media query */
+
+@media screen and (max-width:1024px) {
+    .account_container{
+        top: 5%;
+        position: fixed;
+        width: 80%;
+        
+        
+    }
+    .account_main{
+        width: 100%;
+        margin-left: 0;
+    }
+    .account_sider{
+        display: none;
+    }
+    .account_links{
+        display: none;
+    }
+    .profile_image,.name_details,.delete_account{
+        padding: 1rem;
+    }
+    .profile_image i{
+        font-size: 1.2rem;
+    }
+    .profile_image img{
+        width: 40px;
+        height: 40px;
+    }
+    .delete_account button{
+        padding: 8px;
+    }
+    .account_main{
+        padding: 1rem;
+    }
+    .security_heder .manage_acc{
+        padding: .5rem;
+    }
+    .account_main h1{
+        font-size: 1.2rem;
+    }
+    .account_main h2{
+        font-size: 1rem;
+    }
+    .account_main p{
+        font-size: .9rem;
+    }
+    .account_links a{
+        font-size: 1rem;
+    }
+    .account_main .profile{
+        font-size: 1rem;
+    }
+    .account_links a i{
+        margin-right: .5rem;
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+    
+
+    .account_container{
+        /* position: relative; */
+        position: fixed;
+        top:5%;
+        width: 80%;
+        height: fit-content;
+        
+    }
+    .account_main{
+        width: 100%;
+        margin-left: 0;
+    }
+    .account_sider{
+        display: none;
+    }
+    .account_links{
+        display: none;
+    }
+    .profile_image,.name_details,.delete_account{
+        padding: 1rem;
+    }
+    .profile_image i{
+        font-size: 1.2rem;
+    }
+    .profile_image img{
+        width: 40px;
+        height: 40px;
+    }
+    .delete_account button{
+        padding: 8px;
+    }
+    .account_main{
+        padding: 1rem;
+    }
+    .security_heder .manage_acc{
+        padding: .5rem;
+    }
+    .account_main h1{
+        font-size: 1.2rem;
+    }
+    .account_main h2{
+        font-size: 1rem;
+    }
+    .account_main p{
+        font-size: .9rem;
+    }
+    .account_links a{
+        font-size: 1rem;
+    }
+    .account_main .profile{
+        font-size: 1rem;
+    }
+    .account_links a i{
+        margin-right: .5rem;
+    }
+    
+}
+
+@media screen and (max-width:576px) {
+    .account_main h1{
+        font-size: 1rem;
+    }
+    .account_main h2{
+        font-size: .9rem;
+    }
+    .account_main p{
+        font-size: .8rem;
+    }
+    .account_links a{
+        font-size: .9rem;
+    }
+    .account_main .profile{
+        font-size: .9rem;
+    }
+    .account_links a i{
+        margin-right: .3rem;
+    }
+    .profile_image i{
+        font-size: 1.2rem;
+    }
+    .profile_image img{
+        width: 30px;
+        height: 30px;
+    }
+    .delete_account button{
+        padding: 6px;
+    }
+    .account_main{
+        padding: .5rem;
+    }
+    .security_heder .manage_acc{
+        padding: .3rem;
+    }
+    .profile_image,.name_details,.delete_account{
+        padding: .5rem;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+
+    }
+    to {
+        transform: translateY(0);
+    }
+    
+}

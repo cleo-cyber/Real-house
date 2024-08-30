@@ -1,0 +1,92 @@
+.url{
+font-weight: 400;
+color: #333;    
+
+
+}
+.update_form{
+    gap: 1rem;
+    padding: 2rem 2rem;
+    border : 1px solid #d6d3d3df;
+    border-radius: 5px;
+}
+.form_group{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form_group label{
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 400;
+}
+.form_group input{
+    padding: 1rem;
+    border: 1px solid #33333376;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #333;
+    box-shadow: 1px 1px 1px #33333376;
+}
+.form_group input:focus{
+    border: 1px solid var(--color-bg);
+    cursor: pointer;
+}
+.form_group input::placeholder{
+    font-size: 1rem;
+    color: #33333376;
+}
+.form_group input[type='file']::placeholder{
+    font-size: 1rem;
+    color: #33333376;
+}
+.form_group button{
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    font-weight: bold;
+    color: #fff;
+}
+.form_group .cancel{
+    background: transparent;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+.form_group button:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+@media screen and (max-width:768px) {
+    
+    .update_form{
+        padding: 2rem 1rem;
+    }
+    .form_group input{
+        padding: 0.5rem;
+    }
+    .form_group button{
+        padding: 0.5rem;
+    }
+    .form_group label{
+        font-size: 1rem;
+    }
+    .form_group input::placeholder{
+        font-size: 0.8rem;
+    }
+    .form_group input[type='file']::placeholder{
+        font-size: 0.8rem;
+    }
+    .form_group button{
+        padding: 0.5rem;
+    }
+    .form_group .cancel{
+        font-size: 1rem;
+    }
+}

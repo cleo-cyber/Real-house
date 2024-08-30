@@ -1,0 +1,39 @@
+.add__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.add__container form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.add__container form input{
+    border-radius: .5rem;
+    padding: 1rem;
+    border: 1px solid var(--color-bg);
+
+}
+
+.add__container form input[type='text']{
+    padding: 1rem;
+}
+
+.add__container form textarea{
+    border: 1px solid var(--color-bg);
+    border-radius: .5rem;
+    padding: 1rem;
+}
+.add__container form select{
+    border: 1px solid var(--color-bg);
+    padding: 1rem;
+    border-radius: .5rem;
+    width: 30%;
+}
+.add__container form input[type='file']{
+    width: 30%;
+}
+.add__container .SubmitBtn{
+    width: 30%;
+}

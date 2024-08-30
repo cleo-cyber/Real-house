@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/listings.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/Hero.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="./assets/js/Functions/checktoken.js"></script>
+
+
+
+    <title>Document</title>
+    <style>
+        .price-filter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #684ecf;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    margin: 10px 0;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #684ecf;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #684ecf;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.price-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .price-inputs input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+} */
+
+.price-inputs span {
+    margin: 0 10px;
+}
+
+.apply-button {
+    /* background-color: transparent; */
+    color: #684ecf;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="container header__container ">
+
+        <div class="logo">
+            <img src="./assets/images/RealLogo.jpg" alt="logo">
+        </div>
+        <nav>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="./priceprediction/index.html">Predict</a>
+                <a href="./Dashboard.html" class="dashboard_link">Dashboard</a>
+                <!-- <a href="rent.html">Rent</a> -->
+                <a href="#Services">Services</a>
+                <!-- <div class="btn__signup2">
+                    <button class="btn logoutbtn">Logout</button>
+                </div> -->
+            </ul>
+
+
+        </nav>
+        <div class="btn__signup">
+            <button class="btn logoutbtn">Logout</button>
+
+
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </div>
+    <div class="container search_container">
+        <form action="" id="search_listing">
+            <div class="select_container">
+                <select name="House Type" id="type">
+                    <option value="All">All</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Sale">Sale</option>
+                </select>
+                <select name="Status" id="status">
+                    <option value="All">All</option>
+                    <option value="Furnished">Furnished</option>
+                    <option value="Unfurnished">Unfurnished</option>
+    
+                </select>
+            </div>
+
+            <!-- <div class="search_cont">
+                <input type="text" name="search" placeholder="Search...">
+                <input type="submit" value="Search" class="btn-search">
+            </div> -->
+            <!-- <div class="price-filter">
+                <label for="priceRange">PRICE (KSH)</label>
+                <div class="slider-container">
+                    <input type="range" id="minPrice" class="slider" min="0" max="15000000" step="10000" value="0">
+                    <input type="range" id="maxPrice" class="slider" min="0" max="15000000" step="10000" value="15000000">
+                </div>
+                <div class="price-inputs">
+                    <input type="number" id="minPriceInput" value="0" min="0" max="15000000" step="10000">
+                    <span>-</span>
+                    <input type="number" id="maxPriceInput" value="15000000" min="0" max="15000000" step="10000">
+                    <button id="applyFilters" class="apply-button">APPLY</button>
+                </div>
+            </div> -->
+            
+
+        </form>
+    </div>
+    <div class="container listin_container">
+        <div class="l_container">
+            <div class="lists">
+                
+                          
+                    
+            </div>
+ 
+        </div>
+        
+
+
+            
+        <div class="filter_container">
+            <!-- Range Input -->
+            <div class="range_container">
+                <div class="range">
+                    <label for="myRange">Price</label>
+                    <!-- <input type="range" min="100000" max="10000000" value="100000" class="slider" id="myRange"> -->
+                    <div class="slider-container">
+                        <input type="range" id="minPrice" class="slider" min="0" max="15000000" step="10000" value="0">
+                        <input type="range" id="maxPrice" class="slider" min="0" max="15000000" step="10000" value="15000000">
+                    </div>
+                    <div class="range_input price-inputs">
+                        <input type="number" class="disp_input" placeholder="Min">
+                        <input type="number" class="disp_input" placeholder="Max">
+                    </div>
+                   
+
+                </div>
+                <!-- <div class="range"> -->
+                    <!-- <label for="myRange">Area Range</label> -->
+                    <!-- <input type="range" min="100000" max="10000000" value="100000" class="slider" id="myRange2"> -->
+                    <!-- <input type="number" class="disp_input">
+                </div> -->
+                <div class="search_Range price-inputs">
+                    <button id="applyFilters" class="apply-button">APPLY</button>
+                </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </section>
+        
+    <section id="footer" class="container">
+        <div class=" footer_links">
+            <div class="company">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Sell</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">Services</a></li>
+
+                </ul>
+            </div>
+            <div class="socials">
+                <h3>Connect</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</i></a>
+                <a href="#">LinkedIn</a>
+
+        </div>
+        </div>
+
+        <div class="newsletter">
+            <h4>Sign up for newsletter</h4>
+            <p>Subscribe to get realestate market updates</p>
+            <form action="#">
+                <input type="email" placeholder="Enter Email">
+                <i class='bx bx-right-arrow-alt'></i>
+                        </form>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="line"></div>
+        </div>
+          <div class="container copyright_logo">
+            <div class="logo">
+                <img src="./assets/images/RealLogo.jpg" alt="logo">
+            </div>
+            <p>
+                &copy; 2024 RealHouse. All Rights Reserved
+            </p>
+          </div>
+    </section>
+
+    <script src="./assets/js/App.js"></script>
+    <script type="text/javascript" src="./assets/js/Listings/rangeinput.js"></script>
+    <script src="./assets/js/viewall.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./assets/js/Logout.js"></script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

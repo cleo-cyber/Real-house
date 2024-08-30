@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/Hero.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+     -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="./assets/css/cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+  />
+
+
+  <link rel="stylesheet" href="./assets/css/chat.css">
+  <script src="./assets/js/chatbot.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <script src="./assets/js/Functions/checktoken.js"></script>
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="back_circle">
+        <img src="./assets/images/Ellipse 4.png" alt="">
+    </div>
+    <div class="container header__container ">
+
+        <div class="logo">
+            <img src="./assets/images/RealLogo.jpg" alt="logo">
+        </div>
+        <nav>
+            <ul>
+                <a href="#">Home</a>
+                <a href="priceprediction/index.html" class="predict">Predict</a>
+                <a href="./Dashboard.html" class="dashboard_link">Dashboard</a>
+                <!-- <a href="rent.html" class="rent">Rent</a> -->
+                <a href="#Services">Services</a>
+                <!-- <div class="btn__signup2">
+                    <button class="btn logoutbtn">Logout</button>
+                </div> -->
+            </ul>
+
+
+        </nav>
+        <div class="btn__signup">
+            <button class="btn logoutbtn">Logout</button>
+
+
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </div>
+
+    <section id="Her__Serction">
+
+        <div class="container hero__container ">
+            <div class="hero__text">
+                <div class="big_text">
+                    <h1>Step Into Beautiful <span>Distinctive</span> Homes Near You.</h1>
+                </div>
+                <div class="hero_smalltext">
+                    <p class="text-light">  Welcome to RealHouse, your trusted partner in real estate. Explore our curated selection of luxurious homes, apartments, and investment opportunities in Near you</p>
+                </div>
+                <div class="hero__Calltoaction">
+                    <a href="Listing.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+            <div id="hero__cotainer-img">
+
+            </div>
+            <script>
+                var animation=bodymovin.loadAnimation({
+                    container:document.getElementById('hero__cotainer-img'),
+                    renderer:'svg',
+                    loop:true,
+                    autoplay:true,
+                    path:'./assets/animations/data.json',
+                    name:'Demo animation',
+                    background:'transparent'
+                })
+            </script>
+
+        </div>
+    </section>
+
+    <section id="hero">
+        <div class="container hero__add">
+            <article>
+                <h2>350+</h2>
+                <small>Property Ready</small>
+
+            </article>
+            <div class="line"></div>
+            <article>
+                <h2>280</h2>
+                <small>Award Winning</small>
+
+            </article>
+            <div class="line"></div>
+            <article>
+                <h2>15K+</h2>
+                <small>Happy Customer</small>
+
+            </article>
+            <div class="line"></div>
+            <article>
+                <h2>10+</h2>
+                <small>Years in Business</small>
+
+            </article>
+        </div>
+    </section>
+
+    <!-- Popular Listing -->
+    <section id="popular_listing"> 
+        <div class="container popular__btn_container">
+
+            <div class="popular__text">
+                <h2>Recent Listing</h2>
+                <h5 class="text-light">RealHouse Most popular Watchlist</h5>
+            </div>
+
+            <div class="nav_btns">
+                <div class="nav_btns-others">
+                    <a href="#" class="btn active" id="rentButton">Rent</a>
+                    <a href="#" class="btn" id="saleButton">Sale</a>
+                <!-- </div> -->
+                <div class="nav_btn-view">
+                    <a href="#" class="btn all_listings">View All</a>
+                </div>
+            </div>
+        </div>
+        
+    </section> 
+    <section>
+        <div class="container">
+            <div class="listings" id="listingsContainer">
+                <!-- Listings will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+    <!-- <section>
+        <div class="container popular_listing">
+            <div class="listings">
+                <a href="details.html">
+                    <div class="listing">
+                        <div class="listing_img">
+                            <img src="./assets/images/houses/bg1.jpg" alt="">
+                            <div class="line_Sep"></div>
+                            <div class="listing_txt">
+                                <div class="price">
+                                    <h2>$394,000</h2>
+                                </div>
+                                <div class="txt">
+                                    <h2>Spad House Appartments</h2>
+                                    <small>Nairobi,Kenya</small>
+                                </div>
+                                <div class="icons">
+                                    <small><i class='bx bx-bed'></i> beds</small>
+                                    <small><i class='bx bx-bath'></i> Bath</small>
+                                    <small><i class='bx bx-area'></i> 300 Sqft</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="listing">
+                    <div class="listing_img">
+                        <img src="./assets/images/houses/bg2.jpg" alt="">
+                        <! <div class="line_Sep"></div> -->
+<!-- 
+                        <div class="listing_txt">
+                            <div class="price">
+                                <h2>$394,000</h2>
+                            </div>
+                            <div class="txt">
+
+
+                                <h2>Spad House Appartments</h2>
+                                <small>Nairobi,Kenya</small>
+                            </div>
+                            <div class="icons">
+                                <small><i class='bx bx-bed'></i> beds</small>
+                                <small><i class='bx bx-bath'></i> Bath</small>
+                                <small><i class='bx bx-area'></i> 900Sqft</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listing">
+                    <div class="listing_img">
+                        <img src="./assets/images/houses/bg3.jpg" alt=""> -->
+                        <!-- <div class="line_Sep"></div> -->
+<!-- 
+                        <div class="listing_txt">
+                            <div class="price">
+                                <h2>$394,000</h2>
+                            </div>
+                            <div class="txt">
+                                <h2>Spad House Appartments</h2>
+                                <small>Nairobi,Kenya</small>
+                            </div>
+                            <div class="icons">
+                                <small><i class='bx bx-bed'></i> beds</small>
+                                <small><i class='bx bx-bath'></i> Bath</small>
+                                <small><i class='bx bx-area'></i> 200 Sqft</small>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>  -->
+    <!-- Services -->
+    <section id="Services">
+
+        <h2>We Will Assist You with All Your problems</h2>
+        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, aperiam?</h5>
+        <div class="container service__container">
+            <div class="service__img">
+                <img src="./assets/images/houses/bg5.jpg" alt="">
+            </div>
+            <div class="services__descriptions">
+                <div class="description">
+                    <div class="desc_icon">
+
+                    </div>
+                    <div class="text">
+                        <h2>Consultation</h2>
+                        <p>Expert guidance tailored to your real estate needs. Let us help you navigate the market with confidence.</p>
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="desc_icon">
+
+                    </div>
+                    <div class="text">
+                        <h2>House Solution</h2>
+                        <p>Comprehensive solutions for all your housing needs, from finding the perfect home to managing your property with ease.</p>
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="desc_icon">
+
+                    </div>
+                    <div class="text">
+                        <h2>Marketing</h2>
+                        <p>Effective marketing strategies to showcase your property and reach the right audience, ensuring a successful sale or rental</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="featured">
+        <div class="container feature__container">
+
+            <div class="feature">
+                <div class="feature__text">
+                    <h2>Our Featured Residence</h2>
+                    <p>Check Out Some Of Our Best Residences And Choose One That Suits Your Fancy</p>
+                </div>
+                <div class="feature__btn">
+                    <a href="Listing.html" class="btn">More Residence</a>
+                </div>
+            </div>
+            <div class="listings">
+                <a href="details.html">
+                    <div class="listing">
+                        <div class="listing_img">
+                            <img src="./assets/images/houses/bg5.jpg" alt="">
+                            <div class="line_Sep"></div>
+                            <div class="listing_txt">
+
+                                <div class="txt">
+                                    <h2>Spad House Appartments</h2>
+                                    <small>Nairobi,Kenya</small>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="listing">
+                    <div class="listing_img">
+                        <img src="./assets/images/bg6.jpg" alt="">
+                        <div class="line_Sep"></div>
+                        <div class="listing_txt">
+
+                            <div class="txt">
+                                <h2>Spad House Appartments</h2>
+                                <small>Nairobi,Kenya</small>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listing">
+                    <div class="listing_img">
+                        <img src="./assets/images/houses/bg3.jpg" alt="">
+                        <div class="line_Sep"></div>
+                        <div class="listing_txt">
+
+                            <div class="txt">
+                                <h2>Spad House Appartments</h2>
+                                <small>Nairobi,Kenya</small>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section> -->
+    <section id="us">
+        <h2>Find The Best Home With Us</h2>
+        <div class="container us__container">
+          
+            <div class="caculate">
+                <div class="calculatE__text">
+                   
+                    <h2>Consult</h2>
+                    <div class="line"></div>
+                    <p>We are ready to help consult your property</p>
+                    <p>Have questions or need guidance? Connect with our real estate professionals for personalized advice. We're here to help you make informed decisions.</p>
+                    <a href="#" class="btn btn-primary">Consult</a>
+                </div>
+                <div class="calculate__img">
+                  
+                
+            </div>
+            <script>
+                var animation=bodymovin.loadAnimation({
+                    container:document.querySelector('.calculate__img'),
+                    renderer:'svg',
+                    loop:true,
+                    autoplay:true,
+                    path:'./assets/animations/theconsult.json',
+                    name:'Demo animation',
+                    background:'transparent'
+                })
+            </script>
+            </div>
+            <div class="consultation">
+                <div class="consult__Text">
+                    
+                    <h2>Calculate</h2>
+                    <div class="line"></div>
+                    <p>Find The Best Price for You, Calculate your property value now</p>
+                    <p>Use our advanced pricing model to estimate the value of your property. Simply click the call to action below, and let our algorithm do the rest!
+
+                    </p>
+                    <a href="./priceprediction/index.html"  target="" class="btn btn-primary predict_page">Calculate</a>
+                </div>
+                <div class="consult__img">
+        
+            </div>
+            <script>
+                var animation=bodymovin.loadAnimation({
+                    container:document.querySelector('.consult__img'),
+                    renderer:'svg',
+                    loop:true,
+                    autoplay:true,
+                    path:'./assets/animations/calculate.json',
+                    name:'Demo animation',
+                    // remove background
+                    background:'transparent'
+
+                    
+                })
+            </script>
+        </div>
+        
+        </div>
+    </section>
+    <section id="Testimonials">
+        <h2>Testimonials</h2>
+        <div class=" container testimonial mySwiper">
+            <div class="testi-content swiper-wrapper">
+                <div class="slide swiper-slide">
+                    <img src="./assets/images/cesar-rincon-XHVpWcr5grQ-unsplash.jpg" alt="" class="image">
+                    <p>"I’ve been in the real estate business for over a decade, and I can confidently say that RealHouse is one of the best tools I’ve come across. The platform’s simplicity and power are unmatched, making property listings, buyer inquiries, and transaction management a breeze. The accurate pricing model helps me stay competitive, and the mobile-friendly interface ensures I can manage my business on the go. RealHouse has significantly boosted my productivity and profitability, and I highly recommend it to fellow realtors."</p>
+                        <i class='bx bxs-quote-alt-right quote-icon'></i>
+                        <div class="details">
+                            <span class="name">John Doe</span>
+                            <span class="job">Realtor</span>
+                        </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="./assets/images/dragos-gontariu-GH-mSApoKO0-unsplash.jpg" alt="" class="image">
+                    <p>"RealHouse has been a game-changer for my real estate business. The platform’s intuitive design allows me to list and manage properties effortlessly, and the integrated pricing model helps ensure that my listings are always competitive. The ability to directly communicate with potential buyers through the site has streamlined my sales process, leading to quicker closings and happier clients. RealHouse is a must-have tool for any realtor looking to stay ahead in the market."</p>
+                        <i class='bx bxs-quote-alt-right quote-icon'></i>
+                        <div class="details">
+                            <span class="name">Chintan Kacha</span>
+                            <span class="job">Realtor</span>
+                        </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="./assets/images/lance-reis--EKIQx3h8Eg-unsplash.jpg" alt="" class="image">
+                    <p>"As a realtor with a large portfolio, managing multiple properties was always a challenge until I started using RealHouse. The platform offers a comprehensive suite of features that make property management so much easier. The real-time analytics and price benchmarking tools have particularly stood out, giving me insights that I previously spent hours gathering. RealHouse has not only improved my efficiency but also my client satisfaction, thanks to its seamless user interface and communication tools."
+
+                    </p>
+                        <i class='bx bxs-quote-alt-right quote-icon'></i>
+                        <div class="details">
+                            <span class="name">Anne Piason</span>
+                            <span class="job">Realtor</span>
+                        </div>
+                </div>
+         
+            </div>
+            
+            <!-- <div class="swiper-button-next swiper-btn"></div>
+            <div class="swiper-button-prev swiper-btn"></div>
+            <div class="swiper-pagination"></div> -->
+        </div>
+    </section>
+    <!-- <section id="aboutus">
+        <h2>Find The Best Home With US</h2>
+        <div class="container cards__container">
+            <div class="card">
+                <div class="card_text">
+                    <h2>Consultation</h2>
+                    <p>We are ready to help consult your property</p>
+                    <a href="#" class="btn btn-primary">Start Chat</a>
+                </div>
+                <div class="card__img">
+                    <img src="breath.jpg" alt="">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_text">
+                    <h2>Calculate</h2>
+                    <p>We are ready to help consult your property</p>
+                    <a href="#" class="btn btn-primary">Calculate</a>
+                </div>
+                <div class="card__img">
+                    <img src="./assets/images/houses/marketing.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+
+ 
+
+    <!-- Footer -->
+    <!-- <section id="footer">
+        <div class="container footer__container">
+            <div class="footer__container-chat">
+                <h2>Have Something To Talk About With Our Professionals?</h2>
+                <form action="#">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Type Your Message"></textarea>
+                    <i class='bx bxs-right-top-arrow-circle'></i>
+                </form>
+                <div class="otherfooter__links">
+                    <h3>Follow Our Other Sites</h3>
+                    <div class="other__links">
+                        <button> <i class='bx bxs-right-top-arrow-circle'></i> Whatsapp</button>
+                        <button> <i class='bx bxs-right-top-arrow-circle'></i> Twiter</button>
+                        <button> <i class='bx bxs-right-top-arrow-circle'></i> Instagram</button>
+                        <button> <i class='bx bxs-right-top-arrow-circle'></i> Tiktok</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__container-links">
+                <div class="footer__links">
+                    <a href="#">About</a>
+                    <a href="#">Sell</a>
+                    <a href="#">Review</a>
+                    <a href="#">Services</a>
+                </div>
+                <div class="footer__logo">
+                    <h1>RealHouse</h1>
+                    <p>Find Your Dream Property</p>
+                    <p>realhounse@gmail.com</p>
+                    <a href="./Addlisting.html"  class="btn btn-primary addlisting">Add Listing</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="footer" class="container">
+        <div class=" footer_links">
+            <div class="company">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Sell</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">Services</a></li>
+
+                </ul>
+            </div>
+            <div class="socials">
+                <h3>Connect</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</i></a>
+                <a href="#">LinkedIn</a>
+
+        </div>
+        </div>
+
+        <div class="newsletter">
+            <h4>Sign up for newsletter</h4>
+            <p>Subscribe to get realestate market updates</p>
+            <form action="#">
+                <input type="email" placeholder="Enter Email">
+                <i class='bx bx-right-arrow-alt'></i>
+                        </form>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="line"></div>
+        </div>
+          <div class="container copyright_logo">
+            <div class="logo">
+                <img src="./assets/images/RealLogo.jpg" alt="logo">
+            </div>
+            <p>
+                &copy; 2024 RealHouse. All Rights Reserved
+            </p>
+          </div>
+    </section>
+   
+
+    <!-- Chat -->
+    <button class="chatbot-toggler">
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <!-- End of Bottom Right Floating Action Button -->
+  
+      <!-- Start Chat Modal -->
+      <div class="chatbot">
+        <header>
+          <h2>RealHouse</h2>
+          <span class="close-btn material-symbols-outlined">close</span>
+        </header>
+        <ul class="chatbox">
+          <li class="chat incoming">
+            <span class="material-symbols-outlined">smart_toy</span>
+            <p>Hi there 👋<br />How can I help you today?</p>
+          </li>
+        </ul>
+        <div class="chat-input">
+          <textarea
+            placeholder="Enter a message..."
+            spellcheck="false"
+            required
+          ></textarea>
+          <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+      </div>
+      <!-- End Chat Modal -->
+</body>
+<script src="./assets/js/Listings/createlisting.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="./assets/js/App.js"></script>
+<script src="./assets/js/Logout.js"></script>
+<script src="./assets/js/swipper.js"></script>
+<script src="./assets/js/Functions/Checkrole.js"></script>
+<script src="./assets/js/Listings/getDetail.js"></script>
+
+</html>

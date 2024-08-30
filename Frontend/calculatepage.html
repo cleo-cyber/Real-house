@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+    <link rel="stylesheet" href="./assets/css/calcpage.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/Hero.css" />
+    <link rel="stylesheet" href="./assets/css/chat.css">
+    <script src="./assets/js/chatbot.js" defer></script>
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+  />
+</head>
+<body>
+    <div class="back_circle">
+        <img src="./assets/images/Ellipse 4.png" alt="">
+    </div>
+    <div class="container header__container ">
+
+        <div class="logo">
+            <img src="./assets/images/RealLogo.jpg" alt="logo">
+        </div>
+        <nav>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="priceprediction/index.html" class="predict">Predict</a>
+                <a href="./Dashboard.html" class="dashboard_link">Dashboard</a>
+                <!-- <a href="rent.html" class="rent">Rent</a> -->
+                <a href="#Services">Services</a>
+                <!-- <div class="btn__signup2">
+                    <button class="btn logoutbtn">Logout</button>
+                </div> -->
+            </ul>
+
+
+        </nav>
+        <div class="btn__signup">
+            <button class="btn logoutbtn">Logout</button>
+
+
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </div>
+    <section>
+    <div class="container disp_cont">
+        <div class="price_container">
+            <form id="price-form">
+                <div class="firstformcont">
+                  <div>
+                    <label for="num-rooms">Rooms:</label>
+                    <input type="number"  id="num-rooms" name="num-rooms" placeholder="Enter number of rooms" required />
+                  </div>
+        
+                  <div>
+                    <label for="area">Area (sq. ft):</label>
+                    <input type="number" id="area" name="area" placeholder="Enter area in quare feet" required />
+                  </div>
+                </div>
+                <div>
+                  <div class="selections">
+                    <div>
+                      <label for="bathroom">Bathroom</label>
+                      <select id="bathroom" name="bathroom" required>
+                        <option value="">---</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        
+                      
+                      </select>
+                    </div>
+                    <div>
+                      <label for="title">Title</label>
+                      <select id="title" name="title" required>
+                        <option value="">---</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Terrace Duplex">Terrace Duplex</option>
+                        <option value="Detached Duplex">Detached Duplex</option>
+                        <option value="Semi Detached Duplex">Semi Detached Duplex</option>
+                        <option value="Bungalow">Bungalow</option>
+                        <option value="Mansion">Mansion</option>
+                        <option value="Flat">Flat</option>
+                        <option value="Penthouse">Penthouse</option>
+
+                      </select>
+                    </div>
+        
+                    <div>
+                      <label for="location">Location:</label>
+                      <select id="location" name="location" required>
+                        <option value="">---</option>
+                        <option value="Katsina">Katsina</option>
+                        <option value="Katsina">Ondo</option>
+                        <option value="Ekiti">Ekiti</option>
+                        <option value="Ogun">Ogun</option>
+                        <option value="Edo">Edo</option>
+                        <option value="Kano">Kano</option>
+                        <option value="Kaduna">Kaduna</option>
+                        <option value="Lagos">Lagos</option>
+                        <option value="Abuja">Abuja</option>
+                        <option value="Cross Rivers">Cross Rivers</option>
+
+
+
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="calcBtns">
+                  <button type="submit" class="btn calc">Calculate</button>
+                  <!-- <button type="reset" class="btn">Reset</button> -->
+                </div>
+              </form>
+        </div>
+        <div id="result">
+            <h2>Price Estimate</h2>
+            <p id="price">  </p>
+        </div>
+    </div>
+    </section>
+    <section id="footer" class="container">
+        <div class=" footer_links">
+            <div class="company">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Sell</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">Services</a></li>
+  
+                </ul>
+            </div>
+            <div class="socials">
+                <h3>Connect</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</i></a>
+                <a href="#">LinkedIn</a>
+  
+        </div>
+        </div>
+  
+        <div class="newsletter">
+            <h4>Sign up for newsletter</h4>
+            <p>Subscribe to get realestate market updates</p>
+            <form action="#">
+                <input type="email" placeholder="Enter Email">
+                <i class='bx bx-right-arrow-alt'></i>
+                        </form>
+        </div>
+    </section>  
+    <section>
+        <div class="container">
+            <div class="line"></div>
+        </div>
+          <div class="container copyright_logo">
+            <div class="logo">
+                <img src="./assets/images/RealLogo.jpg" alt="logo">
+            </div>
+            <p>
+                &copy; 2024 RealHouse. All Rights Reserved
+            </p>
+          </div>
+    </section>
+
+     <!-- Chat -->
+     <button class="chatbot-toggler">
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <!-- End of Bottom Right Floating Action Button -->
+  
+      <!-- Start Chat Modal -->
+      <div class="chatbot">
+        <header>
+          <h2>RealHouse</h2>
+          <span class="close-btn material-symbols-outlined">close</span>
+        </header>
+        <ul class="chatbox">
+          <li class="chat incoming">
+            <span class="material-symbols-outlined">smart_toy</span>
+            <p>Hi there 👋<br />How can I help you today?</p>
+          </li>
+        </ul>
+        <div class="chat-input">
+          <textarea
+            placeholder="Enter a message..."
+            spellcheck="false"
+            required
+          ></textarea>
+          <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+      </div>
+      <!-- End Chat Modal -->
+</body>
+
+    <script src="./assets/js/pricecalc.js"></script>
+    <script src="./assets/js/App.js"></script>
+</body>
+</html>

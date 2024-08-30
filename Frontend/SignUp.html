@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/Signup.css">
+    <title>Document</title>
+    <style>
+          .error {
+            border: 2px solid red;
+        }
+        .error-message {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!-- 
+    <div class="signup_image">
+        <img src="./assets/images/signup.avif" alt="">
+    </div> -->
+    <div class="signup2">
+        <img src="./assets/images/vector.jpg" alt="">
+    </div>
+
+    <div class="container signup__container">
+        
+        <form action="#">
+            <h1>Sign Up</h1>
+            <div class="logo">
+                <img src="./assets/images/RealLogo.jpg" alt="">
+            </div>
+            <input type="text" name="firstname" placeholder="First Name" class="firstname" required>
+            <span class="error-message" id="fnameValueError">First name is required.</span>
+            <input type="text" name="lastname"  placeholder="Last Name" class="lastname" required>
+            <span class="error-message" id="lnameValueError">Last name is required.</span>
+            <input type="text" name="email" placeholder="Email" class="email" required>
+            <span class="error-message" id="emailValueError">Email is required.</span>
+            <input type="password" name="password"  placeholder="Password" class="password" required>
+            <span class="error-message" id="passwordValueError">Password is required.</span>
+            <input type="password" name="password2"  placeholder="Confirm Password" class="password2" required>
+            <span class="error-message" id="passwordValueError">Password is required.</span>
+            <!-- <input type="text" name="" id="" placeholder="Phone Number" class="Number">/ -->
+            
+            <div class="radio">
+                <div class="radio_btns">
+                    <input type="checkbox" id="togglePassword">
+                    <label for="togglePassword" class="togglePassword">Show Password</label>
+    
+                </div>
+                <div class="radio_btns">
+                    <input type="radio" name="role" id="radio1" value="Tenant" class="radio1" required>
+                    <label for="radio1" class="radio1">Tenant</label>
+                </div>
+                <div class="radio_btns">
+                <input type="radio" name="role" id="radio2" value="Realtor" class="radio2" required>
+                <label for="radio2" class="radio2">Realtor</label>
+                </div>
+                
+                
+            </div>
+            <span class="error-message" id="roleValueError">Role is required.</span>
+            <button type="submit" class="registerBtn">Register</button>
+
+            <p>Already have an account? <a href="./Login.html" class="alredy_haveacc">Login</a></p>
+        </form>
+    </div>
+
+    <script src="./assets/js/register.js"></script>
+</body>
+</html>

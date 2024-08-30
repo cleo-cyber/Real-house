@@ -1,0 +1,116 @@
+.disp_cont{
+    display: flex;
+    gap: 10px;
+    
+}
+.price_container{
+    padding: 20px 10px;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    flex-basis: 50%;
+}
+#price-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* margin-top: 20px; */
+}
+
+#price-form .firstformcont{
+display: flex;    
+flex-direction: column;
+gap: 10px;
+
+}
+
+
+.selections{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+
+    
+
+}
+
+#price-form input[type="number"], #price-form select{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+
+
+.calcBtns{
+    display: flex;
+    gap: 10px;
+
+}
+
+.calcBtns button{
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#result{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    flex-basis: 50%;
+    height: fit-content;
+}
+
+#result h2{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#result p{
+    font-size: 1.2rem;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 3rem;
+    border-radius: 5px;
+    
+}
+
+@media  (max-width: 768px) {
+    .disp_cont{
+        flex-direction: column;
+    }
+    #price-form{
+        gap: 20px;
+    }
+    #result{
+        margin-top: 20px;
+    }
+
+    .selections{
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+    #price-form .firstformcont{
+        flex-direction: column;
+    }
+    #price-form input[type="number"], #price-form select{
+        width: 100%;
+    }
+    .calcBtns{
+        flex-direction: column;
+    }
+    .calcBtns button{
+        width: 100%;
+    }
+
+    #result p{
+        padding: 1rem;
+    }
+
+    
+    
+}

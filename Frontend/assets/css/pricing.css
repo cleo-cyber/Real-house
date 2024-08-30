@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    user-select: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+:root{
+
+
+    
+    --color-bg: #121212;
+    --color-bg-variant: #1a1625;
+    --color-primary:#5d3ccb;
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+    --transition: all 400ms ease;  
+    --color-white:white;
+    --bg-gray:#fdfdfd;
+    --primary-variant: rgba(77, 181, 255, 0.4);
+
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f4f4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 500;
+}
+
+a{
+    color: var(--color-bg-variant);
+    transition: var(--transition);
+    text-decoration: none;
+
+}
+
+a:hover{
+    color: var(--color-bg-variant);
+}
+
+.btn{
+    width: max-content;
+    display: inline-block;
+    color: var(--color-bg);
+    padding: 0.75rem 1.2rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    border: 1px solid var(--color-bg);
+    transition: var(--transition);
+}
+nav .btn{
+    display: none;
+}
+
+.btn:hover{
+    background: var(--color-bg);
+    color: var(--color-white);
+    border-color: transparent;
+}
+.btn.active{
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+.btn-primary{
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    width: 40%;
+
+}
+
+
+#Pricing_description{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    gap: 20px;
+
+}
+
+#Pricing_description .side_hero_container{
+    position: fixed;
+    /* width: 100%; */
+    background: #212121;
+    /* padding: 50% 0; */
+    /* text-align: center; */
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    height: 100%;
+    color: #fff;
+    width: 50%;
+}
+
+#Pricing_description .side_hero_container .side_hero{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* justify-content: center; */
+    padding: 30% 20%;
+    /* align-items: center; */
+    }
+#Pricing_description .side_hero_container .side_hero .side_hero_content .side_about{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* padding: 0 20px; */
+
+}
+
+#Pricing_description .side_hero_container .side_logo{
+display: flex;
+/* justify-content: center; */
+align-items: center;
+/* height: 100%; */
+gap: 10px;
+}
+#Pricing_description .side_hero_container .side_logo img{
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.side_hero_content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* padding: 0 20px; */
+
+}
+.side_about h1{
+    
+    font-size: 2rem;
+    color: #fff;
+    line-height: normal;
+    /* text-align: center; */
+}
+
+.side_about h1 span{
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    line-height: normal;
+    
+}
+
+.side_about p{
+    font-size: 1rem;
+    color: #fff;
+    /* text-align: center; */
+}
+.side_description p{
+    font-size: 1rem;
+    color: #ddd;
+    /* text-align: center; */
+
+}
+
+.side_btn button{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-weight:600;
+    color: #ddd;
+}
+.side_btn a{
+    color: #ddd;
+}
+
+.side_socials ul{
+    display: flex;
+    gap: 10px;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 20px 0;
+
+}
+.side_socials ul li{
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.side_socials ul i{
+    color: var(--primary-variant);
+
+}
+
+
+
+
+#Pricing_description .pricing_working{
+    position: fixed;
+    right: 0;
+    height: 100%;
+
+    
+    width:50%;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.pricing_description{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+ 
+.price_working{
+    background:#fff;
+    color: #212121;
+    /* padding: 1rem; */
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px 2px rgba(110, 110, 110, 0.1);
+}
+.price_working .price_image{
+height: 10rem;
+width: 100%;
+}
+.price_working .price_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    /* border-radius: 50%; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+}
+.pricing_working .predictive_image{
+    height: 50%;
+    width: 100%;
+    
+}
+.pricing_working .predictive_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    /* border-radius: 10px; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+}
+.price_working ul{
+    padding: 2rem 2rem;
+}
+.price_working ul li {
+    list-style:disc;
+}
+
+
+
+@media screen and (max-width:768px){
+    #Pricing_description{
+    display: flex;
+
+        flex-direction: column;
+}
+
+/* switch all position fixed to relative */
+#Pricing_description .side_hero_container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    /* text-align: center; */
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 20px;
+    flex-direction: column;
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+
+#Pricing_description .pricing_working{
+  
+    display: none;
+        /* background: var(--color-bg); */
+}
+
+
+}
