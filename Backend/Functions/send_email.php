@@ -68,8 +68,8 @@ try {
         $mail->isSMTP();                                            
         $mail->Host       = 'smtp.gmail.com';                       
         $mail->SMTPAuth   = true;                                   
-        $mail->Username   = 'realhouse73@gmail.com';                  // SMTP username
-        $mail->Password   = 'sfha ardh jjke ftch';                      // SMTP password
+        $mail->Username   = '';                  // SMTP username
+        $mail->Password   = '';                      // SMTP password
         $mail->SMTPSecure = 'tls';                                
         $mail->Port       = 587;                                    
 

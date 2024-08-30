@@ -17,7 +17,7 @@ RealHouse is a comprehensive Real Estate Management System (REMS) designed to st
 
 # Project Structure
 
-RealHouse/
+``` Real-House/
 ├── backend/
 │   ├── config.php
 │   ├── signup.php
@@ -36,13 +36,14 @@ RealHouse/
 │   ├── model.pkl
 │   └── Wazobia.ipynb
 └── README.md
+```
 
 
 ## Installation and Setup
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-repository/RealHouse.git
-cd RealHouse
+git clone https://github.com/cleo-cyber/Real-house.git
+cd Real-House
 ``` 
 
